@@ -10,8 +10,24 @@
 
 @implementation CHCrystalBall
 
+- (NSArray *) predictions {
+    if (_predictions == nil) {
+        _predictions = [[NSArray alloc] initWithObjects:@"It is Certain",
+                        @"It is decidedly so",
+                        @"Niners will win",
+                        @"I am awesome",
+                        @"Why are we so cool?",
+                        @"Patrick Willis",
+                        nil];
+    }
+    
+    return _predictions;
+}
+
 - (NSString *) randomPrediction {
-    return nil;
+    int random = arc4random_uniform(self.predictions.count);
+    
+    return [self.predictions objectAtIndex:random];
 }
 
 @end

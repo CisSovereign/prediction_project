@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CHCrystalBall : NSObject
-@property (strong, nonatomic) NSArray *predictions; 
+@interface CHCrystalBall : NSObject {
+    NSArray *_predictions;
+}
+
+@property (strong, nonatomic, readonly) NSArray *predictions;
 
 - (NSString *) randomPrediction;
 

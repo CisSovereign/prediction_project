@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class CHCrystalBall;
+
+
 @interface CHViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
 
-@property (strong, nonatomic) NSArray *predictions;
+@property (strong, nonatomic) CHCrystalBall *crystalBall;
 
 - (IBAction)buttonPressed;
 

@@ -7,6 +7,7 @@
 //
 
 #import "CHViewController.h"
+#import "CHCrystalBall.h"
 
 @interface CHViewController ()
 
@@ -18,16 +19,9 @@
 {
     [super viewDidLoad];
 	
-    self.predictions = [[NSArray alloc] initWithObjects:@"It is Certain",
-                        @"It is decidedly so",
-                        @"Niners will win",
-                        @"I am awesome",
-                        @"Why are we so cool?",
-                         @"Patrick Willis",
-                        nil];
-   
+    self.crystalBall = [[CHCrystalBall alloc] init];
+ 
 }
-
 
 
 - (void)didReceiveMemoryWarning
@@ -38,8 +32,7 @@
 
 - (IBAction)buttonPressed {
  
-    int random = arc4random_uniform(self.predictions.count);
     
-    self.predictionLabel.text = [self.predictions objectAtIndex:random];
+    self.predictionLabel.text = [self.crystalBall randomPrediction];
 }
 @end
