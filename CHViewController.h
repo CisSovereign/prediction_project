@@ -17,7 +17,10 @@
 
 @property (strong, nonatomic) CHCrystalBall *crystalBall;
 
+- (void) makePrediction;
+
 - (IBAction)buttonPressed;
 
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 @end

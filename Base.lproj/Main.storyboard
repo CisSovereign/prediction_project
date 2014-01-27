@@ -60,6 +60,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="eSJ-Gs-it5" id="680-mw-yKD"/>
                         <outlet property="predictionLabel" destination="uKs-3c-2PD" id="0DX-ve-4Sm"/>
                     </connections>
                 </viewController>
