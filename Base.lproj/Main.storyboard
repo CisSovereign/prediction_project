@@ -16,25 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It is decidely so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="225" translatesAutoresizingMaskIntoConstraints="NO" id="uKs-3c-2PD">
-                                <rect key="frame" x="48" y="103" width="225" height="113"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone Retina" translatesAutoresizingMaskIntoConstraints="NO" id="eSJ-Gs-it5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sonic Facts!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="310" translatesAutoresizingMaskIntoConstraints="NO" id="uKs-3c-2PD">
+                                <rect key="frame" x="5" y="75" width="310" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="ELa-UK-574"/>
+                                    <constraint firstAttribute="width" constant="310" id="s5X-UG-wrj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epe-ZH-mgD">
-                                <rect key="frame" x="97" y="269" width="126" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epe-ZH-mgD">
+                                <rect key="frame" x="36" y="453" width="247" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Predict">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="P4G-u3-sC9"/>
+                                    <constraint firstAttribute="width" constant="247" id="pSr-wR-zIm"/>
+                                </constraints>
+                                <state key="normal" image="button-on">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" image="button-off"/>
                                 <connections>
                                     <action selector="buttonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VBW-eP-V2i"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uKs-3c-2PD" firstAttribute="centerX" secondItem="eSJ-Gs-it5" secondAttribute="centerX" id="0HW-5M-bG6"/>
+                            <constraint firstItem="eSJ-Gs-it5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ETH-t0-GTz"/>
+                            <constraint firstItem="uKs-3c-2PD" firstAttribute="centerY" secondItem="eSJ-Gs-it5" secondAttribute="centerY" constant="-131" id="GVN-Dt-KMK"/>
+                            <constraint firstItem="ppk-wQ-e3a" firstAttribute="top" secondItem="eSJ-Gs-it5" secondAttribute="bottom" id="HaV-Rn-GBD"/>
+                            <constraint firstItem="ppk-wQ-e3a" firstAttribute="top" secondItem="epe-ZH-mgD" secondAttribute="bottom" constant="70" id="TZX-hF-5mF"/>
+                            <constraint firstAttribute="trailing" secondItem="eSJ-Gs-it5" secondAttribute="trailing" id="s9s-kc-mvn"/>
+                            <constraint firstItem="eSJ-Gs-it5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="sWn-C1-OH0"/>
+                            <constraint firstAttribute="centerX" secondItem="epe-ZH-mgD" secondAttribute="centerX" id="tq2-2d-wlk"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="predictionLabel" destination="uKs-3c-2PD" id="0DX-ve-4Sm"/>
@@ -44,6 +67,11 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="button-off" width="480" height="100"/>
+        <image name="button-on" width="480" height="100"/>
+        <image name="iPhone Retina" width="640" height="1136"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
